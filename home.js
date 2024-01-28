@@ -1,6 +1,6 @@
 function startGame() {
     // Redirect to the game page when the "Start Game" button is clicked
-    window.location.href = 'index.html';
+    window.location.href = 'game.html';
 }
 function resetGame() {
     const endgameScreen = document.getElementById('endgame-screen');
