@@ -55,7 +55,7 @@ function dropPoop() {
 
     poopSound.play();
 
-    const initialSpeedX = Math.random() * 5 + 10;
+    const initialSpeedX = Math.random() * 10 + 10;
     const initialSpeedY = Math.random() * 2 + 10;
     let speedX = initialSpeedX;
     let speedY = initialSpeedY;
