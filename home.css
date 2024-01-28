@@ -23,9 +23,15 @@ body {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 100px;
+    align-items: center;
 }
 
 h1 {
+    
     font-size: 48px; /* Increased font size for a more prominent heading */
     margin-bottom: 20px;
     font-family: 'Arial', sans-serif; /* Use your preferred font-family */
@@ -33,18 +39,30 @@ h1 {
 }
 
 button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: brown;
+    font-family: 'Arial', sans-serif;
+    font-size: 20px; /* Increased font size */
+    padding: 15px 30px; /* Increased padding for larger size */
+    background-color: #9d581b;
     color: white;
     border: none;
+    border-radius: 10px; /* Increased border-radius for rounded corners */
     cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transform property for vibrating effect */
+  }
+  
+  /* Hover effect for the button */
+  button:hover {
+    background-color: #6f3131;
+  }
+  
+  /* Active effect for the button */
+  button:active {
+    transform: scale(0.95) translate(2px, 2px); /* Vibrating effect */
+  }
 
-button:hover {
-    background-color: #8b4513; /* Darker brown on hover */
+  .monkey-image {
+    width: 550px; /* Adjust the width as needed */
+    height: auto;
+    margin-bottom: 20px; /* Add margin for spacing */
 }
-
 
