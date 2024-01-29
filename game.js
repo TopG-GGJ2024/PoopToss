@@ -5,10 +5,10 @@ const gameContainer = document.querySelector('.game-container');
 const scoreDisplay = document.querySelector('.score');
 const livesDisplay = document.querySelector('.lives');
 
-const poopSound = new Audio('poop_sound.mp3');
-const splashSound = new Audio('splash_sound.mp3');
-const gameOverSound = new Audio('game_over_sound.mp3');
-const poopHitTargetSound = new Audio('poop_hit_target.mp3');
+const poopSound = new Audio('./Assets/Audio/poop_sound.mp3');
+// const splashSound = new Audio('./Assets/Audio/splash_sound.mp3');
+const gameOverSound = new Audio('./Assets/Audio/game_over_sound.mp3');
+const poopHitTargetSound = new Audio('./Assets/Audio/poop_hit_target.mp3');
 
 let score = 0;
 let chances = 3;
@@ -24,8 +24,10 @@ function moveStool(event) {
 
     if (event.key === 'ArrowLeft' && stool.offsetLeft > 50) {
         stool.style.left = `${stool.offsetLeft - (stoolSpeed + horizontalAcceleration)}px`;
+		console.log("HERE");
     } else if (event.key === 'ArrowRight' && stool.offsetLeft + stool.offsetWidth < maxRightPosition) {
         stool.style.left = `${stool.offsetLeft + (stoolSpeed + horizontalAcceleration)}px`;
+		console.log("THERE");
     }
 
     if (horizontalAcceleration < 10) {
@@ -37,7 +39,7 @@ function dropPoop() {
     const poopSize = Math.floor(Math.random() * 30) + 40;
     const poop = document.createElement('img');
     poop.className = 'poop';
-    poop.src = 'shitt.png';
+    poop.src = './Assets/Images/shitt.png';
     poop.style.width = `${poopSize}px`;
     poop.style.height = `${poopSize}px`;
     poop.style.position = 'absolute';
@@ -45,12 +47,12 @@ function dropPoop() {
     poop.style.left = '15%';
 
     const monkey = document.querySelector('.poop-top img');
-    monkey.src = 'fart.png';
+    monkey.src = './Assets/Images/Fart.png';
 
     gameContainer.appendChild(poop);
 
     setTimeout(() => {
-        monkey.src = 'monkey1.png';
+        monkey.src = './Assets/Images/monkey1.png';
     }, 400);
 
     poopSound.play();
@@ -92,7 +94,7 @@ function dropPoop() {
                 gameContainer.removeChild(poop);
                 clearInterval(poopFall);
                 updateScore();
-                splashSound.play();
+                // splashSound.play();
                 poopHitTargetSound.play();
             }
         } else {
@@ -107,7 +109,7 @@ function dropPoop() {
 function createSplash(x, y) {
     const splash = document.createElement('img');
     splash.className = 'splash';
-    splash.src = 'splash.png';
+    splash.src = './Assets/Images/splash.png';
     splash.style.position = 'absolute';
     splash.style.width = '80px';
     splash.style.height = '80px';
@@ -144,7 +146,7 @@ function updateHighScore() {
 
 function loseLife() {
     chances--;
-    splashSound.play();
+    // splashSound.play();
     if (chances >= 0) {
         const brownShade = document.querySelector('.brown-shade');
 
@@ -157,7 +159,7 @@ function loseLife() {
         livesDisplay.textContent = `Chances: ${chances}`;
 
         if (chances === 0) {
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
         }
     } else {
         clearInterval(poopInterval);
@@ -168,7 +170,7 @@ function loseLife() {
 function showEndgameScreen() {
     const endgameScreen = document.getElementById('endgame-screen');
     const endgameScore = document.getElementById('endgame-score');
-    
+
     endgameScore.textContent = `Shit Caught: ${score}`;
     endgameScreen.style.display = 'flex';
     endgameScreen.style.animation = 'slideDown 5s forwards';

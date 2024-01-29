@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <title>Poop Top Game</title>
+</head>
+<body>
+    <!-- Add this audio element inside the body tag -->
+    <audio id="splash-sound" src="./Assets/Audio/poop_hit_target.mp3"></audio>
+    <div id="top-bar">
+        <span class="score">Score: 0</span>
+    </div>
+    <div id="endgame-screen">
+        <img src="./Assets/Images/Shitgotreall.png" alt="Game Over Image" id="endgame-image">
+        <p id="endgame-score">Shit Caught: 0</p>
+    </div>
+    <div class="brown-shade"></div>
+    <div class="game-container">
+        <div class="poop-top">
+            <img id="running-monkey" src="./Assets/Images/monkey1.png" alt="running monkey">
+        </div>
+        <div class="stool">
+            <img src="./Assets/Images/stool.png" alt="stool" class="stool_img">
+        </div>
+        <div class="target-pot"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

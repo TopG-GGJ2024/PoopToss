@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Poop Top Game</title>
+    <link rel="stylesheet" href="home.css">
+    <title>Poop Pop Game</title>
+    <script src="index.js"></script>
 </head>
 <body>
-    <!-- Add this audio element inside the body tag -->
-    <audio id="splash-sound" src="splash.mp3"></audio>
-    <div id="top-bar">
-        <span class="score">Score: 0</span>
-    </div>
-    <div id="endgame-screen">
-        <img src="Shitgotreall.png" alt="Game Over Image" id="endgame-image">
-        <p id="endgame-score">Shit Caught: 0</p>
-    </div>
-    <div class="brown-shade"></div>
-    <div class="game-container">
-        <div class="poop-top">
-            <img id="running-monkey" src="monkey1.png" alt="running monkey">
+    <div class="homepage-container">
+        <img src="./Assets/Images/trv9_44up_210408.jpg" alt="Homepage Background" class="homepage-background">
+        <div class="start-button-container">
+            <div class="image-container">
+                <img src="./Assets/Images/COLLEGE_LOGO.png" alt="Image 1" class="custom-image">
+                <img src="./Assets/Images/deeplink.jpeg" alt="Image 2" class="custom-image">
+                <img src="./Assets/Images/ggj.png" alt="Image 3" class="custom-image">
+                <img src="./Assets/Images/Lavazza.png" alt="Image 4" class="custom-image">
+                <img src="./Assets/Images/imsk.png" alt="Image 5" class="custom-image">
+            </div>
+            <img src="./Assets/Images/monkeyplay.png" alt="Monkey Image" class="monkey-image">
+
+            <h1>Welcome to the PoopToss Game</h1>
+            <button id="start-button" onclick="startGame()">Start Game</button>
         </div>
-        <div class="stool">
-            <img src="stool.png" alt="stool" class="stool_img">
-        </div>
-        <div class="target-pot"></div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
