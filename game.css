@@ -4,7 +4,7 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background-image: url(trv9_44up_210408.jpg);
+  background-image: url(./Assets/Images/trv9_44up_210408.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -90,7 +90,7 @@ html {
   background-repeat: no-repeat;
 
   /* background-color: #8B4513; */
-  background-image: url(branch2.png);
+  background-image: url(./Assets/Images/branch2.png);
   background-size: contain;
   overflow: hidden;
   animation: shakeAnimation 4s infinite forwards; 
@@ -161,7 +161,7 @@ html {
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(ping.png);
+  background-image: url(./Assets/Images/ping.png);
   background-size: contain;
   overflow: hidden;
   z-index: 1; /* Ensure the pot is above the background */
